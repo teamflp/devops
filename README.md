@@ -1068,7 +1068,7 @@ git push -u origin master
 Créez un fichier `.github/workflows/deploy.yml` dans votre dépôt GitHub pour configurer le déploiement automatique de votre site web à chaque `push` sur la branche `master`.
 
 
-
+La vie des DevOpsq est une combinaison de compétences techniques, de collaboration interfonctionnelle et de résolution de problèmes. En suivant les bonnes pratiques DevOps, en utilisant les outils et les technologies appropriés, et en travaillant en équipe, vous pouvez contribuer à la réussite des projets de développement logiciel et à l'amélioration continue des processus de livraison de logiciels.
 
 
 

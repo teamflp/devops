@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page de Cours DevOps</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Ajouter des styles supplémentaires si nécessaire */
+        #sidebar {
+            min-height: 100vh; /* Pleine hauteur */
+            position: fixed; /* Fixé sur le côté */
+            width: 250px; /* Largeur du menu */
+            overflow-y: auto; /* Défilement si le contenu est long */
+        }
+        #content {
+            margin-left: 250px; /* Décaler le contenu à droite */
+        }
+    </style>
+</head>
+<body>
+<!-- Barre de navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Cours DevOps</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#"><i class="fas fa-home"></i> <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#introduction">Introduction</a>
+            </li>
+            <!-- Ajouter d'autres liens si nécessaire -->
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid">
+    <div class="row">
+        <!-- Sidebar / Menu -->
+        <div id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
+            <h2>Menu</h2>
+            <nav class="nav flex-column">
+                <a class="nav-link" href="#introduction">Introduction</a>
+                <a class="nav-link" href="#module-1--comprendre-devops">Comprendre DevOps</a>
+                <a class="nav-link" href="#module-2--culture-devops">Culture DevOps</a>
+                <a class="nav-link" href="#principes-et-pratiques">Principes et Pratiques</a>
+                <a class="nav-link" href="#module-3--intégration-continue-ci-et-livraison-continue-cd">CI/CD</a>
+                <a class="nav-link" href="#module-4--gestion-de-la-configuration-et-automatisation">Gestion de la Configuration et Automatisation</a>
+                <a class="nav-link" href="#module-5--conteneurisation-et-orchestration">Conteneurisation et Orchestration</a>
+                <a class="nav-link" href="#surveillance-journalisation-et-sécurité">Surveillance, Journalisation, et Sécurité</a>
+                <a class="nav-link" href="#module-6--surveillance-et-journalisation">Surveillance et Journalisation</a>
+                <a class="nav-link" href="#module-7--sécurité-devops-devsecops">Sécurité DevOps (DevSecOps)</a>
+                <a class="nav-link" href="#mise-en-pratique-et-projets">Mise en Pratique et Projets</a>
+                <a class="nav-link" href="#module-8--mise-en-pratique">Mise en Pratique</a>
+                <a class="nav-link" href="#module-9--cas-détude-et-projets-de-groupe">Cas d'étude et Projets de Groupe</a>
+                <a class="nav-link" href="#conclusion-et-ressources-pour-continuer-à-apprendre">Conclusion et Ressources pour Continuer à Apprendre</a>
+                <a class="nav-link" href="#mini-projet--création-dun-portfolio-devops">Mini-Projet: Création d'un Portfolio DevOps</a>
+                <a class="nav-link" href="#informations-sur-le-cours">Informations sur le Cours</a>
+            </nav>
+        </div>
+
+        <!-- Contenu de la Page -->
+        <div id="content" class="col-md-9 ml-sm-auto col-lg-10 px-md-4 py-4">
+            <section id="introduction">
+                <h3>Introduction</h3>
+                <p>
+                    DevOps est une approche de développement logiciel qui vise à améliorer la collaboration entre les équipes de développement (Dev) et d'opérations (Ops) pour accélérer la livraison de logiciels de qualité. En intégrant les pratiques de développement et d'opérations, DevOps permet de réduire les délais de mise en production, d'améliorer la qualité des logiciels, et de favoriser l'innovation continue.
+                </p>
+                <p>
+                    Ce cours d'initiation à DevOps vise à présenter les principes, les pratiques, et les outils essentiels de DevOps pour permettre aux participants de comprendre les enjeux de cette approche, d'acquérir des compétences pratiques, et de se préparer à des projets concrets en entreprise.
+                </p>
+            </section>
+            <section id="module-1--comprendre-devops">
+                <h3>Comprendre DevOps</h3>
+                <h4>Définition et objectifs de DevOps...</h4>
+
+                <p>
+                    DevOps est une approche qui vise à unifier le développement logiciel (Dev) et l'exploitation informatique (Ops). L'objectif est d'améliorer la collaboration entre ces deux fonctions pour accélérer la livraison de logiciels de haute qualité. DevOps est né de la nécessité de répondre plus rapidement aux besoins du marché et d'adopter une culture de collaboration plutôt que de travailler en silos. Cela signifie que les équipes de développement et d'opérations travaillent ensemble pour automatiser les processus, améliorer la qualité des logiciels, et favoriser l'innovation continue.
+                </p>
+
+                <p>
+                    Le terme DevOps est apparu pour la première fois en 2009 lors d'une conférence sur les systèmes informatiques agiles. Depuis lors, DevOps est devenu une approche populaire pour les entreprises qui cherchent à améliorer leur agilité, leur efficacité, et leur qualité logicielle. Cette pratique est devenue une norme dans l'industrie du logiciel, et de nombreuses entreprises ont adopté DevOps pour améliorer leur processus de développement et de déploiement.
+                </p>
+            </section>
+            <section id="module2">
+                <h3>Module 2 : Culture DevOps</h3>
+                <p>Importance de la culture d'équipe et collaboration...</p>
+            </section>
+            <section id="module3">
+                <h3>Module 3 : CI/CD</h3>
+                <p>Intégration continue et livraison continue...</p>
+            </section>
+            <!-- Ajouter d'autres sections de module ici -->
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS et dépendances -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

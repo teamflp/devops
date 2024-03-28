@@ -1,5 +1,79 @@
 # INITIATION À DEVOPS
 
+
+<!-- TOC -->
+- [INITIATION À DEVOPS](#initiation-à-devops)
+  - [Introduction](#introduction)
+    - [Module 1 :  Comprendre DevOps](#module-1---comprendre-devops)
+    - [Module 2 :  Culture DevOps](#module-2---culture-devops)
+  - [Principes et Pratiques](#principes-et-pratiques)
+    - [Module 3 :  Intégration Continue (CI) et Livraison Continue (CD)](#module-3---intégration-continue-ci-et-livraison-continue-cd)
+    - [Module 4 :  Gestion de la Configuration et Automatisation](#module-4---gestion-de-la-configuration-et-automatisation)
+    - [Module 5 : Conteneurisation et Orchestration](#module-5--conteneurisation-et-orchestration)
+  - [Surveillance, Journalisation, et Sécurité](#surveillance-journalisation-et-sécurité)
+    - [Module 6 : Surveillance et Journalisation](#module-6--surveillance-et-journalisation)
+    - [Module 7 : Sécurité DevOps (DevSecOps)](#module-7--sécurité-devops-devsecops)
+  - [Mise en Pratique et Projets](#mise-en-pratique-et-projets)
+    - [Module 8 : Mise en Pratique](#module-8--mise-en-pratique)
+    - [Module 9 : Cas d'étude et Projets de Groupe](#module-9--cas-détude-et-projets-de-groupe)
+  - [Conclusion et Ressources pour Continuer à Apprendre](#conclusion-et-ressources-pour-continuer-à-apprendre)
+  - [Mini-Projet : Création d'un Portfolio DevOps](#mini-projet--création-dun-portfolio-devops)
+  - [Informations sur le Cours](#informations-sur-le-cours)
+  - [Introduction](#introduction-1)
+    - [Objectifs du Cours](#objectifs-du-cours)
+    - [Comprendre DevOps](#comprendre-devops)
+      - [Définition et histoire de DevOps.](#définition-et-histoire-de-devops)
+      - [Les objectifs de DevOps : Amélioration de la livraison de logiciels, collaboration, et qualité.](#les-objectifs-de-devops--amélioration-de-la-livraison-de-logiciels-collaboration-et-qualité)
+    - [Culture DevOps](#culture-devops)
+      - [Importance de la culture d'équipe et de la collaboration entre les développeurs (Dev) et les opérations (Ops).](#importance-de-la-culture-déquipe-et-de-la-collaboration-entre-les-développeurs-dev-et-les-opérations-ops)
+    - [Rupture des silos, responsabilité partagée, et apprentissage continu.](#rupture-des-silos-responsabilité-partagée-et-apprentissage-continu)
+    - [Études de cas sur la transformation culturelle.\*](#études-de-cas-sur-la-transformation-culturelle)
+  - [Principes et Pratiques](#principes-et-pratiques-1)
+    - [Module 3 : Intégration Continue (CI) et Livraison Continue (CD)](#module-3--intégration-continue-ci-et-livraison-continue-cd)
+      - [Principes de CI/CD](#principes-de-cicd)
+      - [Outils de CI/CD populaires : Jenkins, GitLab CI, GitHub Actions.](#outils-de-cicd-populaires--jenkins-gitlab-ci-github-actions)
+    - [Mise en place d'un pipeline CI/CD simple.](#mise-en-place-dun-pipeline-cicd-simple)
+    - [Module 4 :  Gestion de la Configuration et Automatisation](#module-4---gestion-de-la-configuration-et-automatisation-1)
+      - [Introduction à la gestion de la configuration : Ansible, Chef, Puppet.](#introduction-à-la-gestion-de-la-configuration--ansible-chef-puppet)
+      - [Infrastructure as Code (IaC) : Terraform, CloudFormation.](#infrastructure-as-code-iac--terraform-cloudformation)
+      - [Automatisation des processus de déploiement.](#automatisation-des-processus-de-déploiement)
+    - [Module 5 : Conteneurisation et Orchestration](#module-5--conteneurisation-et-orchestration-1)
+      - [Introduction aux conteneurs : Docker](#introduction-aux-conteneurs--docker)
+      - [Orchestration de conteneurs : Kubernetes.](#orchestration-de-conteneurs--kubernetes)
+      - [Avantages de la conteneurisation et de l'orchestration.](#avantages-de-la-conteneurisation-et-de-lorchestration)
+  - [Surveillance, Journalisation, et Sécurité](#surveillance-journalisation-et-sécurité-1)
+    - [Module 6 : Surveillance et Journalisation](#module-6--surveillance-et-journalisation-1)
+      - [Outils de surveillance : Prometheus, Nagios.](#outils-de-surveillance--prometheus-nagios)
+      - [Journalisation : ELK Stack (Elasticsearch, Logstash, Kibana), Splunk.](#journalisation--elk-stack-elasticsearch-logstash-kibana-splunk)
+      - [Surveillance proactive et alerte.](#surveillance-proactive-et-alerte)
+    - [Module 7 : Sécurité DevOps (DevSecOps)](#module-7--sécurité-devops-devsecops-1)
+      - [Principes de sécurité intégrés dans le cycle de vie DevOps.](#principes-de-sécurité-intégrés-dans-le-cycle-de-vie-devops)
+      - [Outils de sécurité automatisés : scanners de vulnérabilité, tests de pénétration automatisés.](#outils-de-sécurité-automatisés--scanners-de-vulnérabilité-tests-de-pénétration-automatisés)
+      - [Gestion des secrets et des accès.](#gestion-des-secrets-et-des-accès)
+  - [Mise en Pratique et Projets](#mise-en-pratique-et-projets-1)
+    - [Module 8 : Mise en Pratique](#module-8--mise-en-pratique-1)
+      - [Configuration d'un environnement de développement intégrant les pratiques DevOps.](#configuration-dun-environnement-de-développement-intégrant-les-pratiques-devops)
+      - [Projets pratiques : création d'un pipeline CI/CD, déploiement d'une application web simple en utilisant des conteneurs.](#projets-pratiques--création-dun-pipeline-cicd-déploiement-dune-application-web-simple-en-utilisant-des-conteneurs)
+  - [Liste des commandes Docker utiles](#liste-des-commandes-docker-utiles)
+    - [Gestion des images, des conteneurs, réseaux et voumes Docker](#gestion-des-images-des-conteneurs-réseaux-et-voumes-docker)
+      - [Gestions des images](#gestions-des-images)
+      - [Gestion des conteneurs](#gestion-des-conteneurs)
+      - [Gestion des réseaux](#gestion-des-réseaux)
+      - [Gestion des volumes](#gestion-des-volumes)
+  - [Mini-Projet : Création d'un Portfolio DevOps](#mini-projet--création-dun-portfolio-devops-1)
+  - [Réglage des erreurs courantes pendant l'installation de Docker](#réglage-des-erreurs-courantes-pendant-linstallation-de-docker)
+    - [Option 1 : Désinstallez Docker Snap et Réinstallez la Version Officielle](#option-1--désinstallez-docker-snap-et-réinstallez-la-version-officielle)
+  - [Création dd'un projet DevOps](#création-ddun-projet-devops)
+    - [Crée et configurer un dépot git](#crée-et-configurer-un-dépot-git)
+    - [Créer un GitHub Pages pour votre projet pour le visualiser en ligne](#créer-un-github-pages-pour-votre-projet-pour-le-visualiser-en-ligne)
+    - [Automatiser le déploiement avec GitHub Actions](#automatiser-le-déploiement-avec-github-actions)
+  - [Conclusion](#conclusion)
+  - [Informations sur le Cours](#informations-sur-le-cours-1)
+  - [Remerciements](#remerciements)
+<!-- TOC -->
+
+---
+
 ## Introduction
 
 ### Module 1 :  Comprendre DevOps
@@ -1024,15 +1098,17 @@ Le conteneur en cours d'exécution, contient des information que tel que l'ID, l
 
 Créer un compte sur Github et créez un nouveau dépôt pour votre projet. Vous pouvez suivre les étapes suivantes pour configurer votre dépôt en local :
 
+
 1. Initialiser un dépôt Git dans le répertoire de votre projet :
+
 ```bash
 git init
 ```
 
 2. Configurer votre nom d'utilisateur et votre adresse e-mail pour Git :
 ```bash
-git config --global user.name "Votre Nom"
-git config --global user.email "
+git config --global user.name "Votre Nom GitHub"
+git config --global user.email "mon@email.fr"
 ```
 
 3. Ajouter les fichiers de votre projet au suivi de Git :
@@ -1063,52 +1139,79 @@ git push -u origin master
 4. Accédez à l'URL fournie pour visualiser votre site web en ligne.
 5. Vous pouvez maintenant partager votre site web avec d'autres personnes en partageant l'URL de votre GitHub Pages.
 
-### Créer un fichier GitHub Actions pour le déploiement automatique
+### Automatiser le déploiement avec GitHub Actions
 
-Créez un fichier `.github/workflows/deploy.yml` dans votre dépôt GitHub pour configurer le déploiement automatique de votre site web à chaque `push` sur la branche `master`.
+1. Créez un fichier `.github/workflows/deploy.yml` dans votre dépôt avec le contenu suivant :
+   
+```yaml
+# Simple workflow for deploying static content to GitHub Pages
+name: DevOps
+
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ["development"]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  # Single deploy job since we're just deploying
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Upload entire repository
+          path: '.'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+```
+
+2. Poussez les modifications de votre dépôt local vers GitHub pour déclencher le workflow GitHub Actions.
+3. Accédez à l'onglet Actions de votre dépôt pour suivre le statut du workflow de déploiement.
+4. Une fois le workflow terminé, accédez à l'URL de votre GitHub Pages pour visualiser votre site web en ligne.
+5. Vous avez maintenant automatisé le déploiement de votre site web statique avec GitHub Actions.
+6. Vous pouvez personnaliser davantage le workflow pour inclure des étapes de test, de construction, ou d'autres actions avant le déploiement.
 
 
-La vie des DevOpsq est une combinaison de compétences techniques, de collaboration interfonctionnelle et de résolution de problèmes. En suivant les bonnes pratiques DevOps, en utilisant les outils et les technologies appropriés, et en travaillant en équipe, vous pouvez contribuer à la réussite des projets de développement logiciel et à l'amélioration continue des processus de livraison de logiciels.
+## Conclusion
+
+Le DevOps est une approche puissante pour améliorer la collaboration, l'efficacité et la qualité des logiciels dans les organisations. En intégrant les pratiques DevOps, les équipes peuvent accélérer le développement, améliorer la qualité, et réduire les risques associés aux déploiements logiciels. En adoptant une culture DevOps, les organisations peuvent favoriser l'innovation, la collaboration et l'amélioration continue, créant ainsi un environnement propice à la réussite à long terme.
 
 
+Le DevOps est un domaine en constante évolution, avec de nouveaux outils, pratiques et approches émergentes pour répondre aux besoins changeants des organisations. En restant informé des dernières tendances et en continuant à apprendre et à expérimenter, vous pouvez renforcer vos compétences DevOps et contribuer de manière significative à la transformation numérique de votre organisation.
 
 
+## Informations sur le Cours
 
+- **Formateur** : PATERNE GUÉLABLÉ GNONZION
+- **Public Cible** : Débutants, Développeurs, Administrateurs Système, Ingénieurs DevOps, Étudiants en Informatique.
+- **Prérequis** : Connaissances de base en développement logiciel, systèmes d'exploitation, et réseaux.
+- **Langue** : Français
+- **Contacts** : [ [Email](mailto:paterne81@hotmail.fr) | [LinkedIn](https://www.linkedin.com/in/gnpinformatique/) | [GitHub](https://github.com/teamflp) ]
 
+## Remerciements
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Merci d'avoir suivi ce cours sur le DevOps. J'espère que vous avez trouvé les informations et les exemples présentés utiles pour comprendre les concepts et les pratiques DevOps. N'hésitez pas à explorer davantage les sujets abordés et à les appliquer dans vos projets pour renforcer vos compétences et votre expertise en DevOps. Bonne chance dans votre parcours DevOps et n'oubliez pas de continuer à apprendre et à vous améliorer chaque jour. À bientôt !

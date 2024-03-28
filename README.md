@@ -1067,8 +1067,6 @@ git push -u origin master
 
 Créez un fichier `.github/workflows/deploy.yml` dans votre dépôt GitHub pour configurer le déploiement automatique de votre site web à chaque `push` sur la branche `master`.
 
-```yaml
-name: Deploy to GitHub Pages
 
 
 

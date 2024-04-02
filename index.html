@@ -34,6 +34,47 @@
         <p>GitHub Pages permet de déployer facilement des sites web statiques directement à partir d'un dépôt GitHub. GitHub Actions est un outil d'automatisation qui permet de créer des workflows personnalisés pour tester, construire, et déployer des projets sur GitHub et d'autres plateformes.</p>
     </section>
 
+    <!-- Section Jenkins -->
+    <section class="mb-5">
+        <h2>Jenkins</h2>
+        <p>Jenkins est un outil open-source d'automatisation des tâches permettant de construire, tester, et déployer des logiciels de manière continue. Il est largement utilisé dans les environnements DevOps pour automatiser les processus de CI/CD et améliorer l'efficacité des équipes de développement.</p>
+        <p><a class="btn btn-primary btn-lg" href="https://jenkins.io/" role="button">Jenkins</a></p>
+
+        <h3>Exemple de code</h3>
+        <pre>
+            <code>
+                pipeline {
+                agent {
+                    label 'linux'
+                }
+                stages {
+                    stage('Build') {
+                        steps {
+                            script {
+                                sh 'echo "Hello World"'
+                            }
+                        }
+                    }
+                    stage('Test') {
+                        steps {
+                            script {
+                                sh 'echo "Hello World"'
+                            }
+                        }
+                    }
+                    stage('Deploy') {
+                        steps {
+                            script {
+                                sh 'echo "Hello World"'
+                            }
+                        }
+                    }
+                }
+            }
+            </code>
+        </pre>
+    </section>
+
     <!-- Section Conclusion -->
     <section>
         <h2>Conclusion</h2>

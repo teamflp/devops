@@ -5,93 +5,79 @@
     <title>DevOps CI/CD - Docker et GitHub Pages/Actions</title>
     <!-- Lien CDN pour Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.20.0/css/mdb.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css"/>
+    <!-- Lien CDN pour MDB -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.20.0/css/mdb.min.css" />
+    <!-- Lien CDN pour Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 </head>
 <body>
 
-<div class="container">
-    <div class="jumbotron mt-5">
-        <h1 class="display-4">DevOps : CI/CD, Docker, Jenkins et GitHub</h1>
-        <p class="lead">Comprendre les bases de l'Intégration Continue (CI), la Livraison Continue (CD), Docker, et GitHub Actions pour un flux DevOps optimisé.</p>
+<div class="container my-5">
+
+    <!-- Jumbotron -->
+    <div class="p-5 text-center bg-light">
+        <h1 class="mb-3">DevOps : CI/CD, Docker, Jenkins et GitHub</h1>
+        <h4 class="mb-3">Comprendre les bases de l'Intégration Continue (CI), la Livraison Continue (CD), Docker, et GitHub Actions pour un flux DevOps optimisé.</h4>
         <hr class="my-4">
-        <p>Cette page offre une introduction aux concepts fondamentaux utilisés dans les pratiques DevOps modernes.</p>
+        <p class="lead mb-4">Cette page offre une introduction aux concepts fondamentaux utilisés dans les pratiques DevOps modernes.</p>
     </div>
 
-    <!-- Section CI/CD -->
-    <section class="mb-5">
-        <h2>CI/CD</h2>
-        <p>L'Intégration Continue (CI) et la Livraison Continue (CD) sont des pratiques DevOps permettant d'automatiser le processus de livraison de logiciels, depuis le développement jusqu'à la production. Les modifications de code sont automatiquement testées et déployées, réduisant le temps de mise sur le marché et augmentant la qualité du logiciel.</p>
-    </section>
+    <!-- Sections with MDB Cards -->
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">CI/CD</h5>
+                    <p class="card-text">L'Intégration Continue (CI) et la Livraison Continue (CD) sont des pratiques DevOps permettant d'automatiser le processus de livraison de logiciels, depuis le développement jusqu'à la production.</p>
+                </div>
+            </div>
+        </div>
 
-    <!-- Section Docker -->
-    <section class="mb-5">
-        <h2>Docker <i class="fas fa-docker"></i></h2>
-        <p>Docker est une plateforme de conteneurisation permettant de simplifier le déploiement d'applications dans des conteneurs. Cela assure une cohérence entre les environnements de développement, de test et de production, facilitant la gestion des déploiements et la scalabilité des applications.</p>
-    </section>
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Docker <i class="fab fa-docker"></i></h5>
+                    <p class="card-text">Docker est une plateforme de conteneurisation permettant de simplifier le déploiement d'applications dans des conteneurs.</p>
+                </div>
+            </div>
+        </div>
 
-    <!-- Section GitHub Pages/Actions -->
-    <section class="mb-5">
-        <h2>GitHub Pages & Actions <i class="fas fa-github"></i></h2>
-        <p>GitHub Pages permet de déployer facilement des sites web statiques directement à partir d'un dépôt GitHub. GitHub Actions est un outil d'automatisation qui permet de créer des workflows personnalisés pour tester, construire, et déployer des projets sur GitHub et d'autres plateformes.</p>
-    </section>
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">GitHub Pages & Actions <i class="fab fa-github"></i></h5>
+                    <p class="card-text">GitHub Pages permet de déployer facilement des sites web statiques directement à partir d'un dépôt GitHub.</p>
+                </div>
+            </div>
+        </div>
 
-    <!-- Section Jenkins -->
-    <section class="mb-5">
-        <h2>Jenkins <i class="fas fa-jenkins"></i></h2>
-        <p>Jenkins est un outil open-source d'automatisation des tâches permettant de construire, tester, et déployer des logiciels de manière continue. Il est largement utilisé dans les environnements DevOps pour automatiser les processus de CI/CD et améliorer l'efficacité des équipes de développement.</p>
-        <p><a class="btn btn-primary btn-lg" href="https://jenkins.io/" role="button">Jenkins</a></p>
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Jenkins <i class="fab fa-jenkins"></i></h5>
+                    <p class="card-text">Jenkins est un outil open-source d'automatisation des tâches permettant de construire, tester, et déployer des logiciels de manière continue.</p>
+                    <a href="https://jenkins.io/" class="btn btn-primary">En savoir plus</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        <h3>Exemple de code</h3>
-        <pre>
-            <code>
-                pipeline {
-                agent {
-                    label 'linux'
-                }
-                stages {
-                    stage('Build') {
-                        steps {
-                            script {
-                                sh 'echo "Hello World"'
-                            }
-                        }
-                    }
-                    stage('Test') {
-                        steps {
-                            script {
-                                sh 'echo "Hello World"'
-                            }
-                        }
-                    }
-                    stage('Deploy') {
-                        steps {
-                            script {
-                                sh 'echo "Hello World"'
-                            }
-                        }
-                    }
-                }
-            }
-            </code>
-        </pre>
-    </section>
-
-    <!-- Section Conclusion -->
-    <section>
+    <!-- Conclusion -->
+    <div class="text-center">
         <h2>Conclusion</h2>
-        <p>En combinant l'Intégration Continue (CI), la Livraison Continue (CD), Docker, et GitHub Actions, les équipes de développement peuvent automatiser et optimiser leur flux de travail, réduisant les erreurs humaines, accélérant les déploiements, et améliorant la qualité du logiciel.</p>
-    </section>
+        <p>En combinant l'Intégration Continue (CI), la Livraison Continue (CD), Docker, et GitHub Actions, les équipes de développement peuvent automatiser et optimiser leur flux de travail.</p>
+    </div>
 </div>
+
 <!-- Footer -->
-<footer class="bg-dark text-white text-center py-3 mt-5">
-    <hr>
+<footer class="bg-dark text-center text-white py-4 mt-5">
     <p>&copy; 2021 DevOps CI/CD - Docker et GitHub Pages/Actions</p>
 </footer>
 
 <!-- Scripts Bootstrap (jQuery, Popper.js, et Bootstrap JS) -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
-
+<!-- MDB script -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.20.0/js/mdb.min.js"></script>
 </body>
 </html>

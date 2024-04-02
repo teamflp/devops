@@ -27,7 +27,7 @@ jobs:
 
       - name: Build Docker Image
         run: |
-          docker build -t my-application:latest .
+          docker build -t devops:latest .
           # Vous pouvez ajouter ici d'autres commandes Docker si nécessaire, par exemple pour exécuter des tests unitaires
 
       - name: Setup Pages

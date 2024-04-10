@@ -2,147 +2,60 @@
 
 
 <!-- TOC -->
-- [INITIATION À DEVOPS](#initiation-à-devops)
-  - [Introduction](#introduction)
-    - [Module 1 :  Comprendre DevOps](#module-1---comprendre-devops)
-    - [Module 2 :  Culture DevOps](#module-2---culture-devops)
-  - [Principes et Pratiques](#principes-et-pratiques)
-    - [Module 3 :  Intégration Continue (CI) et Livraison Continue (CD)](#module-3---intégration-continue-ci-et-livraison-continue-cd)
-    - [Module 4 :  Gestion de la Configuration et Automatisation](#module-4---gestion-de-la-configuration-et-automatisation)
-    - [Module 5 : Conteneurisation et Orchestration](#module-5--conteneurisation-et-orchestration)
-  - [Surveillance, Journalisation, et Sécurité](#surveillance-journalisation-et-sécurité)
-    - [Module 6 : Surveillance et Journalisation](#module-6--surveillance-et-journalisation)
-    - [Module 7 : Sécurité DevOps (DevSecOps)](#module-7--sécurité-devops-devsecops)
-  - [Mise en Pratique et Projets](#mise-en-pratique-et-projets)
-    - [Module 8 : Mise en Pratique](#module-8--mise-en-pratique)
-    - [Module 9 : Cas d'étude et Projets de Groupe](#module-9--cas-détude-et-projets-de-groupe)
-  - [Conclusion et Ressources pour Continuer à Apprendre](#conclusion-et-ressources-pour-continuer-à-apprendre)
-  - [Mini-Projet : Création d'un Portfolio DevOps](#mini-projet--création-dun-portfolio-devops)
-  - [Informations sur le Cours](#informations-sur-le-cours)
-  - [Introduction](#introduction-1)
-    - [Objectifs du Cours](#objectifs-du-cours)
-    - [Comprendre DevOps](#comprendre-devops)
-      - [Définition et histoire de DevOps.](#définition-et-histoire-de-devops)
-      - [Les objectifs de DevOps : Amélioration de la livraison de logiciels, collaboration, et qualité.](#les-objectifs-de-devops--amélioration-de-la-livraison-de-logiciels-collaboration-et-qualité)
-    - [Culture DevOps](#culture-devops)
-      - [Importance de la culture d'équipe et de la collaboration entre les développeurs (Dev) et les opérations (Ops).](#importance-de-la-culture-déquipe-et-de-la-collaboration-entre-les-développeurs-dev-et-les-opérations-ops)
-    - [Rupture des silos, responsabilité partagée, et apprentissage continu.](#rupture-des-silos-responsabilité-partagée-et-apprentissage-continu)
-    - [Études de cas sur la transformation culturelle.\*](#études-de-cas-sur-la-transformation-culturelle)
-  - [Principes et Pratiques](#principes-et-pratiques-1)
-    - [Module 3 : Intégration Continue (CI) et Livraison Continue (CD)](#module-3--intégration-continue-ci-et-livraison-continue-cd)
-      - [Principes de CI/CD](#principes-de-cicd)
-      - [Outils de CI/CD populaires : Jenkins, GitLab CI, GitHub Actions.](#outils-de-cicd-populaires--jenkins-gitlab-ci-github-actions)
-    - [Mise en place d'un pipeline CI/CD simple.](#mise-en-place-dun-pipeline-cicd-simple)
-    - [Module 4 :  Gestion de la Configuration et Automatisation](#module-4---gestion-de-la-configuration-et-automatisation-1)
-      - [Introduction à la gestion de la configuration : Ansible, Chef, Puppet.](#introduction-à-la-gestion-de-la-configuration--ansible-chef-puppet)
-      - [Infrastructure as Code (IaC) : Terraform, CloudFormation.](#infrastructure-as-code-iac--terraform-cloudformation)
-      - [Automatisation des processus de déploiement.](#automatisation-des-processus-de-déploiement)
-    - [Module 5 : Conteneurisation et Orchestration](#module-5--conteneurisation-et-orchestration-1)
-      - [Introduction aux conteneurs : Docker](#introduction-aux-conteneurs--docker)
-      - [Orchestration de conteneurs : Kubernetes.](#orchestration-de-conteneurs--kubernetes)
-      - [Avantages de la conteneurisation et de l'orchestration.](#avantages-de-la-conteneurisation-et-de-lorchestration)
-  - [Surveillance, Journalisation, et Sécurité](#surveillance-journalisation-et-sécurité-1)
-    - [Module 6 : Surveillance et Journalisation](#module-6--surveillance-et-journalisation-1)
-      - [Outils de surveillance : Prometheus, Nagios.](#outils-de-surveillance--prometheus-nagios)
-      - [Journalisation : ELK Stack (Elasticsearch, Logstash, Kibana), Splunk.](#journalisation--elk-stack-elasticsearch-logstash-kibana-splunk)
-      - [Surveillance proactive et alerte.](#surveillance-proactive-et-alerte)
-    - [Module 7 : Sécurité DevOps (DevSecOps)](#module-7--sécurité-devops-devsecops-1)
-      - [Principes de sécurité intégrés dans le cycle de vie DevOps.](#principes-de-sécurité-intégrés-dans-le-cycle-de-vie-devops)
-      - [Outils de sécurité automatisés : scanners de vulnérabilité, tests de pénétration automatisés.](#outils-de-sécurité-automatisés--scanners-de-vulnérabilité-tests-de-pénétration-automatisés)
-      - [Gestion des secrets et des accès.](#gestion-des-secrets-et-des-accès)
-  - [Mise en Pratique et Projets](#mise-en-pratique-et-projets-1)
-    - [Module 8 : Mise en Pratique](#module-8--mise-en-pratique-1)
-      - [Configuration d'un environnement de développement intégrant les pratiques DevOps.](#configuration-dun-environnement-de-développement-intégrant-les-pratiques-devops)
-      - [Projets pratiques : création d'un pipeline CI/CD, déploiement d'une application web simple en utilisant des conteneurs.](#projets-pratiques--création-dun-pipeline-cicd-déploiement-dune-application-web-simple-en-utilisant-des-conteneurs)
-  - [Liste des commandes Docker utiles](#liste-des-commandes-docker-utiles)
-    - [Gestion des images, des conteneurs, réseaux et voumes Docker](#gestion-des-images-des-conteneurs-réseaux-et-voumes-docker)
-      - [Gestions des images](#gestions-des-images)
-      - [Gestion des conteneurs](#gestion-des-conteneurs)
-      - [Gestion des réseaux](#gestion-des-réseaux)
-      - [Gestion des volumes](#gestion-des-volumes)
-  - [Mini-Projet : Création d'un Portfolio DevOps](#mini-projet--création-dun-portfolio-devops-1)
-  - [Réglage des erreurs courantes pendant l'installation de Docker](#réglage-des-erreurs-courantes-pendant-linstallation-de-docker)
-    - [Option 1 : Désinstallez Docker Snap et Réinstallez la Version Officielle](#option-1--désinstallez-docker-snap-et-réinstallez-la-version-officielle)
-  - [Création dd'un projet DevOps](#création-ddun-projet-devops)
-    - [Crée et configurer un dépot git](#crée-et-configurer-un-dépot-git)
-    - [Créer un GitHub Pages pour votre projet pour le visualiser en ligne](#créer-un-github-pages-pour-votre-projet-pour-le-visualiser-en-ligne)
-    - [Automatiser le déploiement avec GitHub Actions](#automatiser-le-déploiement-avec-github-actions)
-  - [Conclusion](#conclusion)
-  - [Informations sur le Cours](#informations-sur-le-cours-1)
-  - [Remerciements](#remerciements)
+* [INITIATION À DEVOPS](#initiation-à-devops)
+  * [Introduction](#introduction)
+    * [Objectifs du Cours](#objectifs-du-cours)
+    * [Comprendre DevOps](#comprendre-devops)
+      * [Définition et histoire de DevOps.](#définition-et-histoire-de-devops)
+      * [Les objectifs de DevOps : Amélioration de la livraison de logiciels, collaboration, et qualité.](#les-objectifs-de-devops--amélioration-de-la-livraison-de-logiciels-collaboration-et-qualité)
+    * [Culture DevOps](#culture-devops)
+      * [Importance de la culture d'équipe et de la collaboration entre les développeurs (Dev) et les opérations (Ops).](#importance-de-la-culture-déquipe-et-de-la-collaboration-entre-les-développeurs-dev-et-les-opérations-ops)
+    * [Rupture des silos, responsabilité partagée, et apprentissage continu.](#rupture-des-silos-responsabilité-partagée-et-apprentissage-continu)
+    * [Études de cas sur la transformation culturelle.*](#études-de-cas-sur-la-transformation-culturelle)
+  * [Principes et Pratiques](#principes-et-pratiques)
+    * [Module 3 : Intégration Continue (CI) et Livraison Continue (CD)](#module-3--intégration-continue-ci-et-livraison-continue-cd)
+      * [Principes de CI/CD](#principes-de-cicd)
+      * [Outils de CI/CD populaires : Jenkins, GitLab CI, GitHub Actions.](#outils-de-cicd-populaires--jenkins-gitlab-ci-github-actions)
+    * [Mise en place d'un pipeline CI/CD simple.](#mise-en-place-dun-pipeline-cicd-simple)
+    * [Module 4 :  Gestion de la Configuration et Automatisation](#module-4--gestion-de-la-configuration-et-automatisation)
+      * [Introduction à la gestion de la configuration : Ansible, Chef, Puppet.](#introduction-à-la-gestion-de-la-configuration--ansible-chef-puppet)
+      * [Infrastructure as Code (IaC) : Terraform, CloudFormation.](#infrastructure-as-code-iac--terraform-cloudformation)
+      * [Automatisation des processus de déploiement.](#automatisation-des-processus-de-déploiement)
+    * [Module 5 : Conteneurisation et Orchestration](#module-5--conteneurisation-et-orchestration)
+      * [Introduction aux conteneurs : Docker](#introduction-aux-conteneurs--docker)
+      * [Orchestration de conteneurs : Kubernetes.](#orchestration-de-conteneurs--kubernetes)
+      * [Avantages de la conteneurisation et de l'orchestration.](#avantages-de-la-conteneurisation-et-de-lorchestration)
+  * [Surveillance, Journalisation, et Sécurité](#surveillance-journalisation-et-sécurité)
+    * [Module 6 : Surveillance et Journalisation](#module-6--surveillance-et-journalisation)
+      * [Outils de surveillance : Prometheus, Nagios.](#outils-de-surveillance--prometheus-nagios)
+      * [Journalisation : ELK Stack (Elasticsearch, Logstash, Kibana), Splunk.](#journalisation--elk-stack-elasticsearch-logstash-kibana-splunk)
+      * [Surveillance proactive et alerte.](#surveillance-proactive-et-alerte)
+    * [Module 7 : Sécurité DevOps (DevSecOps)](#module-7--sécurité-devops-devsecops)
+      * [Principes de sécurité intégrés dans le cycle de vie DevOps.](#principes-de-sécurité-intégrés-dans-le-cycle-de-vie-devops)
+      * [Outils de sécurité automatisés : scanners de vulnérabilité, tests de pénétration automatisés.](#outils-de-sécurité-automatisés--scanners-de-vulnérabilité-tests-de-pénétration-automatisés)
+      * [Gestion des secrets et des accès.](#gestion-des-secrets-et-des-accès)
+  * [Mise en Pratique et Projets](#mise-en-pratique-et-projets)
+    * [Module 8 : Mise en Pratique](#module-8--mise-en-pratique)
+      * [Configuration d'un environnement de développement intégrant les pratiques DevOps.](#configuration-dun-environnement-de-développement-intégrant-les-pratiques-devops)
+      * [Projets pratiques : création d'un pipeline CI/CD, déploiement d'une application web simple en utilisant des conteneurs.](#projets-pratiques--création-dun-pipeline-cicd-déploiement-dune-application-web-simple-en-utilisant-des-conteneurs)
+  * [Liste des commandes Docker utiles](#liste-des-commandes-docker-utiles)
+    * [Gestion des images, des conteneurs, réseaux et voumes Docker](#gestion-des-images-des-conteneurs-réseaux-et-voumes-docker)
+      * [Gestions des images](#gestions-des-images)
+      * [Gestion des conteneurs](#gestion-des-conteneurs)
+      * [Gestion des réseaux](#gestion-des-réseaux)
+      * [Gestion des volumes](#gestion-des-volumes)
+  * [Mini-Projet : Création d'un Portfolio DevOps](#mini-projet--création-dun-portfolio-devops)
+  * [Réglage des erreurs courantes pendant l'installation de Docker](#réglage-des-erreurs-courantes-pendant-linstallation-de-docker)
+    * [Option 1 : Désinstallez Docker Snap et Réinstallez la Version Officielle](#option-1--désinstallez-docker-snap-et-réinstallez-la-version-officielle)
+  * [Création dd'un projet DevOps](#création-ddun-projet-devops)
+    * [Crée et configurer un dépot git](#crée-et-configurer-un-dépot-git)
+    * [Créer un GitHub Pages pour votre projet pour le visualiser en ligne](#créer-un-github-pages-pour-votre-projet-pour-le-visualiser-en-ligne)
+    * [Automatiser le déploiement avec GitHub Actions](#automatiser-le-déploiement-avec-github-actions)
+    * [Jenkins pour un projet Docker](#jenkins-pour-un-projet-docker)
+  * [Conclusion](#conclusion)
+  * [Informations sur le Cours](#informations-sur-le-cours)
+  * [Remerciements](#remerciements)
 <!-- TOC -->
-
----
-
-## Introduction
-
-### Module 1 :  Comprendre DevOps
-
-- Définition et histoire de DevOps.
-- Les objectifs de DevOps : Amélioration de la livraison de logiciels, collaboration, et qualité.
-- Les piliers de DevOps : Culture, Automatisation, Lean, Mesure, et Partage (CALMS).
-
-### Module 2 :  Culture DevOps
-- Importance de la culture d'équipe et de la collaboration entre les développeurs (Dev) et les opérations (Ops).
-- Rupture des silos, responsabilité partagée, et apprentissage continu.
-- Études de cas sur la transformation culturelle.
-
-## Principes et Pratiques
-### Module 3 :  Intégration Continue (CI) et Livraison Continue (CD)
-- Principes de CI/CD.
-- Outils de CI/CD populaires : Jenkins, GitLab CI, GitHub Actions.
-- Mise en place d'un pipeline CI/CD simple.
-
-### Module 4 :  Gestion de la Configuration et Automatisation
-- Introduction à la gestion de la configuration : Ansible, Chef, Puppet.
-- Infrastructure as Code (IaC) : Terraform, CloudFormation.
-- Automatisation des processus de déploiement.
-
-### Module 5 : Conteneurisation et Orchestration
-- Introduction aux conteneurs : Docker.
-- Orchestration de conteneurs : Kubernetes.
-- Avantages des conteneurs pour les environnements DevOps.
-
-## Surveillance, Journalisation, et Sécurité
-### Module 6 : Surveillance et Journalisation
-- Outils de surveillance : Prometheus, Nagios.
-- Journalisation : ELK Stack (Elasticsearch, Logstash, Kibana), Splunk.
-- Surveillance proactive et alerte.
-
-### Module 7 : Sécurité DevOps (DevSecOps)
-- Principes de sécurité intégrés dans le cycle de vie DevOps.
-- Outils de sécurité automatisés : scanners de vulnérabilité, tests de pénétration automatisés.
-- Gestion des secrets et des accès.
-
-## Mise en Pratique et Projets
-### Module 8 : Mise en Pratique
-- Configuration d'un environnement de développement intégrant les pratiques DevOps.
-- Projets pratiques : création d'un pipeline CI/CD, déploiement d'une application web simple en utilisant des conteneurs.
-
-### Module 9 : Cas d'étude et Projets de Groupe
-- Analyse de cas d'étude réels de mise en œuvre de DevOps.
-- Projets de groupe pour consolider les connaissances et les compétences acquises.
-
-## Conclusion et Ressources pour Continuer à Apprendre
-- Récapitulatif du cours et des compétences acquises.
-- Chemins de progression et certifications en DevOps.
-- Ressources pour une autoformation continue.
-
-## Mini-Projet : Création d'un Portfolio DevOps
-- Installer et configurer un environnement de développement pour les projets DevOps (Git, Docker, CI/CD).
-- Création d'un portfolio pour documenter les projets et compétences DevOps acquises.
-- Utilisation d'outils de CI/CD pour déployer le portfolio en ligne automatiquement avec GitHub Pages/Actions.
-
----
-
-
-## Informations sur le Cours
-
-- **Formateur** : PATERNE GUÉLABLÉ GNONZION
-- **Public Cible** : Débutants, Développeurs, Administrateurs Système, Ingénieurs DevOps, Étudiants en Informatique.
-- **Prérequis** : Connaissances de base en développement logiciel, systèmes d'exploitation, et réseaux.
-- **Langue** : Français
-- **Contacts** : [ [Email](mailto:paterne81@hotmail.fr) | [LinkedIn](https://www.linkedin.com/in/gnpinformatique/) | [GitHub](https://github.com/teamflp) ]
 
 ---
 
@@ -1195,22 +1108,72 @@ jobs:
 5. Vous avez maintenant automatisé le déploiement de votre site web statique avec GitHub Actions.
 6. Vous pouvez personnaliser davantage le workflow pour inclure des étapes de test, de construction, ou d'autres actions avant le déploiement.
 
+### Jenkins pour un projet Docker
+
+Jenkins est un serveur d'intégration continue open-source qui permet d'automatiser les tâches de build, de test, et de déploiement des applications. GitHub Actions est un service d'intégration continue et de déploiement continu intégré à GitHub, permettant de créer des workflows personnalisés pour automatiser les processus de développement logiciel.
+
+**Installation de Jenkins**
+
+Pour configurer un pipeline CI/CD avec Jenkins pour un projet Dockerisé, vous devez avoir un serveur Jenkins opérationnel avec Docker installé. Vous pouvez ensuite créer un pipeline Jenkins qui automatise le processus de construction de votre image Docker, l'exécution des tests, et le déploiement de votre application. Voici les étapes de base pour y parvenir :
+
+1. Installer Jenkins sur votre serveur en suivant les instructions de la [documentation officielle](https://www.jenkins.io/doc/book/installing/).
+
+Sur un environnement Ubuntu, vous pouvez installer Jenkins en utilisant les commandes suivantes :
+
+```bash
+# Ajouter la clé GPG de Jenkins
+wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -
+
+# Ajouter le dépôt Jenkins à la liste des sources de paquets
+sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+
+# Mettre à jour la liste des paquets
+sudo apt update
+
+# Installer Jenkins et Java
+sudo apt install jenkins openjdk-11-jdk
+
+# Démarrer le service Jenkins
+sudo systemctl start jenkins
+
+# Activer le démarrage automatique de Jenkins au démarrage du système
+sudo systemctl enable jenkins
+
+# Vérifier le statut du service Jenkins
+sudo systemctl status jenkins
+
+# Ouvrir le port 8080 dans le pare-feu pour accéder à Jenkins
+sudo ufw allow 8080
+
+# Récupérer le mot de passe initial de Jenkins
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+```
+2. Accédez à l'interface web de Jenkins en ouvrant votre navigateur et en accédant à l'URL `http://localhost:8080`.
+3. Suivez les instructions pour configurer Jenkins, en entrant le mot de passe initial fourni lors de l'installation.
+4. Installez les plugins nécessaires pour Docker, Git, et tout autre outil que vous souhaitez utiliser dans votre pipeline.
+5. Créer le un utilisateur et un mot de passe pour Jenkins ou continuer avec l'utilisateur par défaut.
+6. Dans l'interface Jenkins, créez un nouveau pipeline en sélectionnant `Nouveau Item` dans le menu principal.
+7. Configurez le pipeline en tant que pipeline Jenkinsfile stocké dans votre dépôt Git, ou en utilisant l'interface graphique pour définir les étapes du pipeline.
+8. Configurez les déclencheurs du pipeline pour qu'il s'exécute automatiquement à chaque push sur la branche principale ou à chaque demande de tirage (pull request).*
+9. Exécutez le pipeline pour tester son fonctionnement et assurez-vous qu'il construit, teste, et déploie votre application Docker correctement.
+10. Surveillez les résultats du pipeline dans l'interface Jenkins et ajustez les étapes du pipeline au besoin pour améliorer l'automatisation et la qualité de votre processus CI/CD.
 
 ## Conclusion
 
 Le DevOps est une approche puissante pour améliorer la collaboration, l'efficacité et la qualité des logiciels dans les organisations. En intégrant les pratiques DevOps, les équipes peuvent accélérer le développement, améliorer la qualité, et réduire les risques associés aux déploiements logiciels. En adoptant une culture DevOps, les organisations peuvent favoriser l'innovation, la collaboration et l'amélioration continue, créant ainsi un environnement propice à la réussite à long terme.
 
-
 Le DevOps est un domaine en constante évolution, avec de nouveaux outils, pratiques et approches émergentes pour répondre aux besoins changeants des organisations. En restant informé des dernières tendances et en continuant à apprendre et à expérimenter, vous pouvez renforcer vos compétences DevOps et contribuer de manière significative à la transformation numérique de votre organisation.
 
-
+---
 ## Informations sur le Cours
-
 - **Formateur** : PATERNE GUÉLABLÉ GNONZION
 - **Public Cible** : Débutants, Développeurs, Administrateurs Système, Ingénieurs DevOps, Étudiants en Informatique.
 - **Prérequis** : Connaissances de base en développement logiciel, systèmes d'exploitation, et réseaux.
 - **Langue** : Français
-- **Contacts** : [ [Email](mailto:paterne81@hotmail.fr) | [LinkedIn](https://www.linkedin.com/in/gnpinformatique/) | [GitHub](https://github.com/teamflp) ]
+
+---
+[![Email](https://img.shields.io/badge/-Email-blue?style=for-the-badge&logo=microsoftoutlook)](mailto:paterne81@hotmail.fr) [![LinkedIn](https://img.shields.io/badge/-LinkedIn-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/gnpinformatique/) [![GitHub](https://img.shields.io/badge/-GitHub-blue?style=for-the-badge&logo=github)](https://github.com/teamflp)
+
 
 ## Remerciements
 
